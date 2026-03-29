@@ -5,7 +5,7 @@ c = gets.chomp.to_i
 
 if a > b && a > c
   puts "Greatest is #{a}"
-elsif b > c
+elsif b > c && b>a
   puts "Greatest is #{b}"
 else
   puts "Greatest is #{c}"
