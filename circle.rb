@@ -2,8 +2,8 @@ def circle_calculation(r)
   area = Math::PI * r * r
   perimeter = 2 * Math::PI * r
 
-  puts "Area = #{area}"
-  puts "Perimeter = #{perimeter}"
+  puts "Area = #{area}.round(2)"
+  puts "Perimeter = #{perimeter}.round(2)"
 end
 
 puts "Enter radius:"
