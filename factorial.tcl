@@ -9,6 +9,8 @@ proc factorial {n} {
     return $result
 }
 
-set number 5
+puts "Enter a number:"
+gets stdin number
+
 set ans [factorial $number]
 puts "Factorial of $number = $ans"
