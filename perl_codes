@@ -1,1 +1,126 @@
+17 (a) Largest among three numbers
+
+print "Enter three numbers:\n";
+$a = <STDIN>; chomp($a);
+$b = <STDIN>; chomp($b);
+$c = <STDIN>; chomp($c);
+
+$max = $a;
+
+if ($b > $max) {
+    $max = $b;
+}
+if ($c > $max) {
+    $max = $c;
+}
+
+print "Largest number is: $max\n";
+
+
+
+
+____________________________________________________
+17 (b) Multiplication tables (1–10) using subroutine
+
+
+
+sub table {
+    my ($n) = @_;
+    for ($i = 1; $i <= 10; $i++) {
+        print "$n x $i = ", $n*$i, "\n";
+    }
+    print "\n";
+}
+
+for ($num = 1; $num <= 10; $num++) {
+    table($num);
+}
+
+___________________________________________________________-
+
+18 (a,b,c) List operations: Shift, Unshift, Push
+🔹 Code
+
+
+
+
+@arr = (2, 3, 4);
+
+push(@arr, 5);
+unshift(@arr, 1);
+
+$first = shift(@arr);
+
+print "Array: @arr\n";
+print "Removed element: $first\n";
+
+
+
+__________________________________________________________________
+
+19 (b) Validate IP and Email
+🔹 Code
+print "Enter IP: ";
+$ip = <STDIN>; chomp($ip);
+
+if ($ip =~ /^(\d{1,3}\.){3}\d{1,3}$/) {
+    print "Valid IP\n";
+} else {
+    print "Invalid IP\n";
+}
+
+print "Enter Email: ";
+$email = <STDIN>; chomp($email);
+
+if ($email =~ /^[\w\.\-]+\@[\w\-]+\.[a-zA-Z]{2,}$/) {
+    print "Valid Email\n";
+} else {
+    print "Invalid Email\n";
+}
+
+
+
+
+___________________________________________________________________
+20. Reverse file using command line argument
+🔹 Code
+
+
+
+$file = $ARGV[0];
+
+open(FH, $file) or die "Cannot open file";
+
+@lines = <FH>;
+close(FH);
+
+@lines = reverse @lines;
+
+foreach $line (@lines) {
+    print $line;
+}
+
+
+#_----------------------------------------------------
+
+19 (a) Substitute word in string (Simple Version)
+
+
+
+print "Enter a sentence:\n";
+$str = <STDIN>;
+chomp($str);
+
+print "Enter word to replace:\n";
+$old = <STDIN>;
+chomp($old);
+
+print "Enter new word:\n";
+$new = <STDIN>;
+chomp($new);
+
+$str =~ s/$old/$new/;
+
+print "Updated sentence: $str\n";
+
 
